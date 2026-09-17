@@ -1,34 +1,34 @@
-:root { --ink: #14221f; --cream: #f7f3ed; --orange: #e96e3d; --muted: #6c7770; --line: #dcded7; }
+:root { --ink: #14221f; --cream: #f7f3ed; --orange: #FCE300; --muted: #6c7770; --line: #dcded7; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: 'Urbanist', sans-serif; }
 a { color: inherit; text-decoration: none; }
 .site-header { align-items: center; display: flex; justify-content: space-between; padding: 25px clamp(24px, 6vw, 88px); position: absolute; top: 0; width: 100%; z-index: 2; }
 .brand { align-items: center; display: inline-flex; font-size: 16px; gap: 10px; letter-spacing: -.03em; }
 .brand strong { font-weight: 700; }
-.brand-mark { align-items: center; background: var(--orange); border-radius: 50%; color: white; display: inline-flex; font-size: 13px; height: 29px; justify-content: center; width: 29px; }
+.brand-mark { align-items: center; background: var(--orange); border-radius: 50%; color: var(--ink); display: inline-flex; font-size: 13px; height: 29px; justify-content: center; width: 29px; }
 nav { display: flex; gap: clamp(18px, 3vw, 42px); margin-left: 8%; }
 nav a { color: rgba(255,255,255,.7); font-size: 13px; position: relative; transition: color .2s; }
 nav a:hover, nav a.active { color: white; }
 nav a.active::after { background: var(--orange); bottom: -9px; content: ''; height: 2px; left: 0; position: absolute; width: 16px; }
 .header-cta { border: 1px solid rgba(255,255,255,.4); border-radius: 99px; color: white; font-size: 12px; padding: 11px 17px; transition: background .2s; }
 .header-cta:hover { background: rgba(255,255,255,.12); }
-.header-cta span { color: #ff9d70; margin-left: 7px; }
-.hero { background: linear-gradient(90deg, rgba(12,28,24,.85) 0%, rgba(12,28,24,.42) 55%, rgba(12,28,24,.13)), url('../images/tajmahal.jpg') center 42%/cover; color: white; min-height: 685px; padding: 205px clamp(24px, 12vw, 175px) 90px; position: relative; }
+.header-cta span { color: var(--orange); margin-left: 7px; }
+.hero { background-color: #1b302b; background-image: linear-gradient(90deg, rgba(12,28,24,.85) 0%, rgba(12,28,24,.42) 55%, rgba(12,28,24,.13)), url('../images/tajmahal.jpg'); background-position: center 42%; background-repeat: no-repeat; background-size: cover; color: white; min-height: 685px; padding: 205px clamp(24px, 12vw, 175px) 90px; position: relative; }
 .hero-content { max-width: 610px; }
-.eyebrow { align-items: center; color: #ffb18f; display: flex; font-size: 11px; font-weight: 700; gap: 10px; letter-spacing: .16em; margin: 0 0 24px; text-transform: uppercase; }
+.eyebrow { align-items: center; color: var(--orange); display: flex; font-size: 11px; font-weight: 700; gap: 10px; letter-spacing: .16em; margin: 0 0 24px; text-transform: uppercase; }
 .eyebrow span { background: var(--orange); display: inline-block; height: 2px; width: 25px; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { font-family: 'Playfair Display', serif; font-size: clamp(58px, 8vw, 108px); font-weight: 600; letter-spacing: -.065em; line-height: .91; margin-bottom: 28px; }
-h1 em, h2 em { color: #f1875d; font-style: normal; }
+h1 em, h2 em { color: var(--orange); font-style: normal; }
 .hero-copy { color: rgba(255,255,255,.75); font-size: 16px; line-height: 1.7; max-width: 395px; }
 .hero-actions { align-items: center; display: flex; gap: 29px; margin-top: 38px; }
 button, .primary-button { border: 0; cursor: pointer; font: inherit; }
-.primary-button { background: var(--orange); border-radius: 3px; color: white; font-size: 13px; font-weight: 700; padding: 16px 20px; transition: transform .2s, background .2s; }
-.primary-button:hover { background: #d85c2e; transform: translateY(-2px); }
+.primary-button { background: var(--orange); border-radius: 3px; color: var(--ink); font-size: 13px; font-weight: 700; padding: 16px 20px; transition: transform .2s, background .2s; }
+.primary-button:hover { background: #e6cf00; transform: translateY(-2px); }
 .primary-button span { font-size: 18px; margin-left: 18px; }
 .text-link { color: white; font-size: 13px; }
-.text-link span { color: #ffad88; font-size: 17px; margin-left: 10px; }
+.text-link span { color: var(--orange); font-size: 17px; margin-left: 10px; }
 .hero-note { align-items: center; bottom: 50px; color: rgba(255,255,255,.7); display: flex; font-size: 11px; gap: 12px; line-height: 1.5; position: absolute; right: clamp(24px, 7vw, 100px); text-transform: uppercase; letter-spacing: .12em; }
 .note-line { background: var(--orange); height: 1px; width: 35px; }
 .intro { align-items: end; display: flex; gap: 80px; justify-content: space-between; padding: 105px clamp(24px, 12vw, 175px) 62px; }
@@ -41,11 +41,25 @@ h2 { font-family: 'Playfair Display', serif; font-size: clamp(35px, 4.5vw, 56px)
 .destination-card:hover img { transform: scale(1.06); }
 .card-overlay { background: linear-gradient(0deg, rgba(6,22,18,.82), transparent 65%); inset: 0; position: absolute; }
 .card-content { bottom: 28px; color: white; left: 27px; position: absolute; right: 27px; }
-.card-number { color: #ffad88; font-size: 11px; letter-spacing: .15em; }
+.card-number { color: var(--orange); font-size: 11px; letter-spacing: .15em; }
 .card-content h3 { font-family: 'Playfair Display', serif; font-size: 31px; font-weight: 600; letter-spacing: -.04em; margin: 12px 0 4px; }
 .card-content p { color: rgba(255,255,255,.75); font-size: 12px; margin: 0; }
-.card-content p span { color: #ffad88; float: right; font-size: 19px; }
+.card-content p span { color: var(--orange); float: right; font-size: 19px; }
+.testimonials { align-items: end; display: grid; gap: clamp(40px, 10vw, 150px); grid-template-columns: minmax(220px, .8fr) 1.2fr; padding: 0 clamp(24px, 12vw, 175px) 110px; }
+.testimonials-heading h2 { max-width: 330px; }
+.carousel { border-top: 1px solid var(--line); padding-top: 27px; }
+.carousel-track { min-height: 220px; position: relative; }
+.testimonial { display: none; }
+.testimonial.is-active { display: block; }
+.quote-mark { color: var(--orange); display: block; font-family: 'Playfair Display', serif; font-size: 70px; height: 47px; line-height: 1; }
+.testimonial blockquote { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3vw, 36px); letter-spacing: -.03em; line-height: 1.15; margin: 16px 0 25px; max-width: 620px; }
+.testimonial-author { color: var(--muted); font-size: 12px; margin: 0; }
+.testimonial-author span { color: #9ba19a; }
+.carousel-controls { align-items: center; display: flex; gap: 16px; justify-content: flex-end; }
+.carousel-button { align-items: center; background: transparent; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); display: inline-flex; font-size: 19px; height: 38px; justify-content: center; padding: 0; width: 38px; }
+.carousel-button:hover, .carousel-button:focus-visible { background: var(--orange); border-color: var(--orange); outline: none; }
+.carousel-status { color: var(--muted); font-size: 11px; letter-spacing: .1em; }
 footer { align-items: center; border-top: 1px solid var(--line); display: flex; justify-content: space-between; margin: 0 clamp(24px, 7vw, 100px); padding: 28px 0 36px; }
 footer p, .back-top { color: var(--muted); font-size: 11px; margin: 0; }
 .back-top:hover { color: var(--orange); }
-@media (max-width: 700px) { .site-header { padding-top: 20px; } nav { display: none; } .header-cta { padding: 9px 13px; } .hero { min-height: 620px; padding-top: 170px; } .hero-note { bottom: 28px; right: 24px; } .intro { align-items: start; flex-direction: column; gap: 28px; padding-bottom: 45px; padding-top: 70px; } .places { grid-template-columns: 1fr; padding-bottom: 65px; } .destination-card, .destination-card.featured { height: 330px; } footer { align-items: start; flex-direction: column; gap: 18px; } }
+@media (max-width: 700px) { .site-header { padding-top: 20px; } nav { display: none; } .header-cta { padding: 9px 13px; } .hero { min-height: 620px; padding-top: 170px; } .hero-note { bottom: 28px; right: 24px; } .intro { align-items: start; flex-direction: column; gap: 28px; padding-bottom: 45px; padding-top: 70px; } .places { grid-template-columns: 1fr; padding-bottom: 65px; } .destination-card, .destination-card.featured { height: 330px; } .testimonials { align-items: start; display: flex; flex-direction: column; gap: 35px; padding-bottom: 75px; } .carousel { width: 100%; } .carousel-track { min-height: 260px; } footer { align-items: start; flex-direction: column; gap: 18px; } }
